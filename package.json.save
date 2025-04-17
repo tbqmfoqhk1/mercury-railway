@@ -34,6 +34,8 @@
     "lint": "eslint . --fix",
     "lint:ci": "remark . && eslint .",
     "lint-fix-quiet": "eslint --fix --quiet",
+
+    "build": "yarn lint && rollup -c && yarn test:build",
     "build:ci": "rollup -c && yarn test:build",
     "build:web": "yarn lint && rollup -c rollup.config.web.js && yarn test:build:web",
     "build:esm": "yarn lint && rollup -c rollup.config.esm.js && yarn test:build:esm",
@@ -105,7 +107,6 @@
     "cheerio": "^0.22.0",
     "difflib": "github:postlight/difflib.js",
     "ellipsize": "0.1.0",
-    "got": "^11.8.6",
     "iconv-lite": "0.5.0",
     "jquery": "^3.5.0",
     "moment": "^2.23.0",
