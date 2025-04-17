@@ -1,5 +1,6 @@
 const express = require("express");
 const mercury = require("@postlight/mercury-parser");
+
 const app = express();
 
 app.get("/parser", async (req, res) => {
